@@ -1,7 +1,21 @@
 import './App.scss'
+//导入依赖
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+//导入文件
+import Login from './pages/Login'
+import Layout from './pages/Layout'
+import NotFound from './pages/NotFound'
 const App = () => {
   return (
-    <div>我是极客园项目</div>
+    <div className='App'>
+      <Router>
+        <Switch>
+          <Route path='/home' component={Layout} />
+          <Route path='/login' component={Login} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+    </div>
   )
 }
 export default App
