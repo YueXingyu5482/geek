@@ -1,3 +1,4 @@
+import 'antd/dist/antd.css';
 import './index.scss'
 import { createRoot } from 'react-dom/client'
 import App from './App'
